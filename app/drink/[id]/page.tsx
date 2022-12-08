@@ -22,7 +22,7 @@ async function page({ params }: { params: { id: string } }) {
   };
   console.log(drink);
   return (
-    <div className="max-w-4xl mx-auto text-3xl border shadow-md h-96 flex flex-col sm:flex-row rounded-md w-full overflow-hidden">
+    <div className="max-w-4xl mx-auto text-3xl border shadow-md pb-5 md:pb-0 md:h-96 flex flex-col md:flex-row rounded-md w-full overflow-hidden">
       <Image
         src={drink.image}
         alt={drink.name}
@@ -31,7 +31,7 @@ async function page({ params }: { params: { id: string } }) {
         height={384}
       />
       <div className="px-10 w-full py-4 space-y-8 items-center text-center md:items-start md:text-start">
-        <h1 className="text-4xl"> {drink.name}</h1>
+        <h1 className="text-4xl">{drink.name}</h1>
         <span
           className={`${
             drink.alcoholic === "Alcoholic" ? "bg-red-500" : "bg-green-500"
