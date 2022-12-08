@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Error({
@@ -15,11 +16,14 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="text-white bg-red-500 p-10 rounded-sm w-full h-32">
-      <p>There was an error fetching the data</p>
-      <button className="" onClick={() => reset()}>
-        Reset error boundary
-      </button>
+    <div className="text-white bg-red-500 p-10 rounded-sm w-full h-32 flex flex-col justify-center items-center">
+      <p>
+        Couldn't find the drink, that may happen because of invalid ID or server
+        issues. try to pick another drink or try again later.
+      </p>
+      <Link href="/" className="bg-green-500 block rounded-md px-2 py-1">
+        Home
+      </Link>
     </div>
   );
 }
