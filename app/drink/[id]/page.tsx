@@ -39,7 +39,7 @@ async function page({ params }: { params: { id: string } }) {
         >
           {drink.alcoholic}
         </span>
-        <div className="w-full">
+        <div className="w-full text-base">
           <p>{drink.instructions}</p>
         </div>
       </div>
