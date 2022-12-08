@@ -7,7 +7,7 @@ export default function DrinkLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="w-full mt-3 md:mt-9 lg:mt-12">
+    <section className="w-full mt-3 p-10 md:p-0 md:mt-9 lg:mt-12">
       <Suspense fallback={<Loading />}>{children}</Suspense>
     </section>
   );
